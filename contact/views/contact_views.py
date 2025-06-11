@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def index(request): # type: ignore
     return render(
-        request,
+        request, # type: ignore
         'contact/index.html',
     )
