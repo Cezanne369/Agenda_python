@@ -1,3 +1,4 @@
+#type: ignore
 """
 Django settings for projet0_1 project.
 
