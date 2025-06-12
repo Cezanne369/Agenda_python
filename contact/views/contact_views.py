@@ -8,14 +8,15 @@ def index(request):# type:ignore
         .filter(show=True)\
         .order_by('-id')[10:20]
 
-    context = {
+    context = {# type:ignore
         'contacts': contacts,
+        'site_title': 'Contatos - '
     }
 
     return render(
         request,# type:ignore
         'contact/index.html',
-        context
+        context# type:ignore
     )
 
 
@@ -25,12 +26,15 @@ def contact(request, contact_id):# type:ignore
         Contact, pk=contact_id, show=True
     )
 
-    context = {
+    site_title = f'{single_contact.first_name} {single_contact.last_name} - '
+
+    context = { # type:ignore
         'contact': single_contact,
+        'site_title': site_title
     }
 
     return render(
         request,# type:ignore
         'contact/contact.html',
-        context
+        context # type:ignore
     )
