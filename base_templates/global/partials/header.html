@@ -1,34 +1,37 @@
-<header class='header'>
-        <h1 class='header-heading'>
-            <a href="{% url "contact:index" %}" class="header-link">
-            Agenda
-            </a>
-        </h1>
+<header class="header">
+  <h1 class="header-heading">
+    <a href="{% url 'contact:index' %}" class="header-link">
+      Agenda
+    </a>
+  </h1>
 
-        <nav class='manu'>
-            <ul class='manu-list'>
-                <li class='manu-item'>
-                    <a href='' class="menu-link">
-                        link 1
-                    </a>
-                </li>
-                <li class='manu-item'>
-                    <a href='' class="menu-link">
-                        link 2
-                    </a>
-                </li>
-            </ul>    
-        </nav>
+  <nav class="menu">
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          Link 1
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          Link 2
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-        <div class='search'>
-            <from action='' method='get'>
-                <input 
-                type='text' 
-                class='search-input' 
-                placeholder='Search'
-                id='search'
-                name='q'
-                > 
-            </from>
-        </div>
-    </header>
+  <div class="search">
+    <form 
+      action="{% url 'contact:search' %}" 
+      method="GET"
+    >
+      <input 
+        type="search" 
+        class="search-input"
+        placeholder="Search"
+        id="search"
+        name="q"
+      >
+    </form>
+  </div>
+</header>
