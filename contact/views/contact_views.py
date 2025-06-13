@@ -1,3 +1,4 @@
+#type:ignore
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -39,7 +40,8 @@ def search(request):
 
     context = {
         'contacts': contacts,
-        'site_title': 'Search - '
+        'site_title': 'Search - ',
+        'search_value': search_value,
     }
 
     return render(
